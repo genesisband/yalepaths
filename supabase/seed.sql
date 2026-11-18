@@ -1,0 +1,4 @@
+-- Fictional local and test records live in scripts/seed-local.mjs.
+-- Run `npm run seed` against the local stack. Do not apply this file to production.
+-- The script below is filled in once the local Auth schema is available; until then
+-- `supabase db reset` applies no demo rows and `npm run seed` does.

@@ -1,0 +1,71 @@
+# Local Supabase CLI configuration. Production secrets live in the hosted project, not here.
+# The jwt_secret below is the public Supabase local-development secret.
+
+project_id = "yalepaths"
+
+[api]
+enabled = true
+port = 54321
+schemas = ["public"]
+extra_search_path = ["public", "extensions"]
+max_rows = 1000
+
+[db]
+port = 54322
+shadow_port = 54320
+major_version = 15
+
+[db.seed]
+enabled = true
+sql_paths = ["./seed.sql"]
+
+[studio]
+enabled = true
+port = 54323
+
+[local_smtp]
+enabled = true
+port = 54324
+
+[auth]
+enabled = true
+site_url = "http://localhost:3000"
+additional_redirect_urls = ["http://localhost:3000"]
+jwt_expiry = 3600
+enable_signup = true
+jwt_secret = "super-secret-jwt-token-with-at-least-32-characters-long"
+
+[auth.email]
+enable_signup = true
+double_confirm_changes = true
+enable_confirmations = true
+otp_length = 6
+otp_expiry = 3600
+max_frequency = "1s"
+
+[auth.email.template.magic_link]
+subject = "Your YalePaths code"
+content_path = "./supabase/templates/magic_link.html"
+
+[auth.email.template.confirmation]
+subject = "Your YalePaths code"
+content_path = "./supabase/templates/magic_link.html"
+
+# Pilot mail. Leave disabled for local Mailpit. For a real pilot, set enabled and the SMTP env vars.
+# Dashboard path: Authentication → SMTP. See https://supabase.com/docs/guides/auth/auth-smtp
+[auth.email.smtp]
+enabled = false
+host = "smtp.example.com"
+port = 587
+user = "env(SMTP_USER)"
+pass = "env(SMTP_PASS)"
+admin_email = "env(SMTP_ADMIN_EMAIL)"
+sender_name = "YalePaths"
+
+[auth.hook.before_user_created]
+enabled = true
+uri = "pg-functions://postgres/public/hook_restrict_to_yale_email"
+
+[auth.sms]
+enable_signup = false
+enable_confirmations = false

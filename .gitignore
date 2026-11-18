@@ -1,0 +1,12 @@
+node_modules
+.next
+.env
+.env*.local
+.stack
+.pgdata
+.bin
+artifacts
+playwright-report
+test-results
+tsconfig.tsbuildinfo
+*.log
