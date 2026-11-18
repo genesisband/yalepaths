@@ -4,17 +4,41 @@
 
 https://youtu.be/lOuIaLaOH3k
 
-## Screenshot
+## Hackathon build screenshot
 
 ![Grok session used to build YalePaths](docs/grok-proof.webp)
 
 ## What is YalePaths?
 
-YalePaths is an atlas of where the Yale community spends its summers. Students and alumni can voluntarily share an internship, job, research project, or other experience, including its organization, location, dates, and a short note. Each entry starts private; its owner chooses whether to share it with other members.
+YalePaths is a community atlas for the question, “Where is everyone going this summer?” Yale students and alumni can voluntarily add an internship, research project, job, study abroad experience, or other opportunity. Each entry records the role, organization, city, dates, and an optional lab and note. Members decide when an entry becomes visible to the rest of the community.
 
-The atlas turns those shared experiences into a way to find people and advice. Members can explore a map or list, search by city, organization, or lab, and filter by year and experience type. Someone heading to a new city can find Yale students and alumni who are there or have been there before, open their profiles, and send a private message to ask about an internship, workplace, or life in that location.
+The shared entries become a searchable map and directory. A student considering an internship can look up the organization, see who has worked there, and ask a more personal question than a job description can answer. Someone moving to a new city can find other Yale members nearby. Alumni can contribute their own experience and stay available to students exploring a similar path. Past experiences remain useful after the summer ends, as long as their owners keep them shared.
 
-YalePaths is built with Next.js, React, Supabase, and OpenStreetMap. It is an independent student project, not an official Yale University service.
+## Explore the features
+
+### Find people by place
+
+The Explore page pairs an interactive map with an index of shared experiences. Selecting a city pin narrows the list to that location; zooming in can show organizations within the city. This makes it easy to find people in the same place, even when they work in different fields.
+
+### Search for an opportunity
+
+Search by city, organization, or lab, then filter by experience type and year. Results include the organization, member, and dates, so students can find someone whose experience is relevant to the opportunity they are considering.
+
+### Add an experience on your terms
+
+Members can add a role, organization, location, dates, and optional context. New entries start private. A member can share, edit, hide, or delete an entry later, keeping control over what appears in the atlas.
+
+### Learn from a member and connect
+
+A shared entry opens its member's profile, where visitors can see that person's other shared experiences and any contact details they chose to show. Members can also start a private conversation inside YalePaths to ask about a workplace, application process, or city.
+
+## Why it matters
+
+Summer plans can scatter a campus community across cities, labs, and workplaces. YalePaths makes those connections discoverable by the people who can benefit from them: students looking for firsthand advice, peers hoping to meet up in a new place, and alumni who want to share what they have learned. Because contributions are voluntary and private by default, the atlas can grow through community participation without requiring anyone to publish their plans.
+
+## How it was built
+
+The interface uses Next.js, React, and TypeScript. Supabase provides the database and member sessions; database access rules keep private experiences and conversations limited to their owners and participants. The Explore map uses Leaflet and OpenStreetMap tiles, with the map and list driven by the same shared entries. YalePaths is an independent student project, not an official Yale University service.
 
 ## Run locally
 
