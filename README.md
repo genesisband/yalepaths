@@ -18,11 +18,11 @@ The shared entries become a searchable map and directory. A student considering 
 
 ### Find people by place
 
-The Explore page pairs an interactive map with an index of shared experiences. Selecting a city pin narrows the list to that location; zooming in can show organizations within the city. This makes it easy to find people in the same place, even when they work in different fields.
+The Explore page pairs an interactive map with an index of shared experiences. Selecting a city pin narrows the list to that location; zooming in can show organizations within the city. Filters for year and experience type apply to the pins on the map as well as to the list, so both stay on the same set of internships, research, jobs, study abroad, and other experiences.
 
 ### Search for an opportunity
 
-Search by city, organization, or lab, then filter by experience type and year. Results include the organization, member, and dates, so students can find someone whose experience is relevant to the opportunity they are considering.
+Search by city, organization, or lab. Narrow the results by experience type — internship, research, job, study abroad, or other — and by year. The list and the map update together. A year includes every experience that overlaps it. Results show the organization, member, and dates, so students can find someone whose experience is relevant to the opportunity they are considering.
 
 ### Add an experience on your terms
 
